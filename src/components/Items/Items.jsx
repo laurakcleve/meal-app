@@ -16,7 +16,6 @@ const Items = () => {
   const { data, loading } = useQuery(ITEMS_QUERY)
 
   useEffect(() => {
-    console.log('DATA:\n', data)
     if (data && data.items) {
       let newDisplayedItems = data.items.filter((item) => {
         return (
