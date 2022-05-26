@@ -1,0 +1,55 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "airbnb",
+    "plugin:prettier/recommended",
+    "prettier/react"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "warn",
+      {
+        "printWidth": 80,
+        "trailingComma": "es5",
+        "singleQuote": true,
+        "arrowParens": "always",
+        "semi": false,
+        "react/jsx-wrap-multilines": "off"
+      }
+    ],
+    "no-console": "off",
+    "no-use-before-define": "off",
+    "semi": [
+      "warn",
+      "never"
+    ],
+    "react/prop-types": 1,
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.styles.js"
+      ],
+      "rules": {
+        "import/prefer-default-export": "off"
+      }
+    }
+  ]
+}

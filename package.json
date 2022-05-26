@@ -1,0 +1,64 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "test": "react-scripts test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@apollo/react-testing": "^3.1.3",
+    "@testing-library/jest-dom": "^5.1.1",
+    "@testing-library/react": "^9.4.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.2",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "jest-styled-components": "^7.0.0",
+    "prettier": "^1.18.2",
+    "react-test-renderer": "^16.12.0",
+    "waait": "^1.0.5"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.3.6",
+    "@fortawesome/fontawesome-free": "^5.11.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/react-fontawesome": "^0.1.7",
+    "dotenv": "^16.0.1",
+    "eslint": "^6.6.0",
+    "graphql": "^14.5.8",
+    "lodash.clonedeep": "^4.5.0",
+    "moment": "^2.24.0",
+    "pluralize": "^8.0.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-fontawesome": "^1.7.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.3.1",
+    "styled-components": "^4.4.1",
+    "typeface-mukta": "0.0.72",
+    "typeface-roboto": "0.0.75",
+    "uuid": "^8.3.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
