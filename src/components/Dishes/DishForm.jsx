@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
@@ -26,19 +26,6 @@ const DishForm = ({
   const [isActive, setIsActive] = useState(isActiveDish)
   const [ingredientSets, setIngredientSets] = useState(dishIngredientSets)
 
-  const resetFields = () => {
-    setName('')
-    setTags([])
-    setIngredientSets(initialIngredientSets)
-  }
-
-  useEffect(() => {
-    if (isSaveComplete) {
-      resetFields()
-      setIsSaveComplete(false)
-    }
-  }, [isSaveComplete, setIsSaveComplete])
-
   const initialIngredientSets = [
     {
       id: Date.now(),
@@ -53,6 +40,19 @@ const DishForm = ({
       ],
     },
   ]
+
+  const resetFields = useCallback(() => {
+    setName('')
+    setTags([])
+    setIngredientSets(initialIngredientSets)
+  }, [initialIngredientSets])
+
+  useEffect(() => {
+    if (isSaveComplete) {
+      resetFields()
+      setIsSaveComplete(false)
+    }
+  }, [isSaveComplete, setIsSaveComplete, resetFields])
 
   const setIngredientText = (
     ingredientSetIndex,
