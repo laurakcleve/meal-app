@@ -24,7 +24,7 @@ const Inventory = () => {
   const [sortBy, setSortBy] = useState('expiration')
   const [sortOrder, setSortOrder] = useState('asc')
 
-  const { data, loading } = useQuery(INVENTORY_ITEMS_QUERY)
+  const { data, loading, error } = useQuery(INVENTORY_ITEMS_QUERY)
 
   const toggleItemOpen = (event, id) => {
     setSelectedElement(event.target)
@@ -140,6 +140,7 @@ const Inventory = () => {
 
       <Layout.List>
         {loading && <p>Loading...</p>}
+        {error && <p>Error: {error.message}</p>}
 
         <>
           {data && data.inventoryItems && (
