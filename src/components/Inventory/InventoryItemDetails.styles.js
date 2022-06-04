@@ -16,7 +16,7 @@ export const Actions = styled.div`
   display: flex;
   width: 100%;
   justify-content: flex-end;
-  margin-bottom: 30px;
+  margin-top: 30px;
 
   button {
     text-transform: uppercase;

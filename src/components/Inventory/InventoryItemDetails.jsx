@@ -37,22 +37,6 @@ const InventoryItemDetails = ({ inventoryItem }) => {
 
   return (
     <>
-      <Styled.Actions>
-        <button type="button">
-          <Link to={`/item/${inventoryItem.item.id}`}>Item page</Link>
-
-          <FontAwesomeIcon icon={faExternalLinkAlt} />
-        </button>
-
-        <button type="button" onClick={(event) => submitDelete(event)}>
-          Delete
-        </button>
-
-        <button type="button" onClick={() => setIsEditing(true)}>
-          Edit
-        </button>
-      </Styled.Actions>
-
       {isEditing ? (
         <InventoryItemEditForm
           setIsEditing={setIsEditing}
@@ -90,6 +74,23 @@ const InventoryItemDetails = ({ inventoryItem }) => {
           </div>
         </Styled.Container>
       )}
+
+      <Styled.Actions>
+        <button type="button">
+          <Link to={`/item/${inventoryItem.item.id}`}>Item page</Link>
+
+          <FontAwesomeIcon icon={faExternalLinkAlt} />
+        </button>
+
+        <button type="button" onClick={(event) => submitDelete(event)}>
+          Delete
+        </button>
+
+        <button type="button" onClick={() => setIsEditing(true)}>
+          Edit
+        </button>
+      </Styled.Actions>
+
     </>
   )
 }
