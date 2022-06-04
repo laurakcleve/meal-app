@@ -492,7 +492,6 @@ const INVENTORY_ITEMS_QUERY = gql`
 
 PurchaseItemAddForm.propTypes = {
   purchaseId: PropTypes.string.isRequired,
-  PURCHASE_QUERY: PropTypes.shape({}).isRequired,
 }
 
 export default PurchaseItemAddForm
