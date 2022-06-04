@@ -64,20 +64,14 @@ const Items = () => {
 }
 
 export const ITEMS_QUERY = gql`
-  # query items {
-  #   items {
-  #     id
-  #     name
-  #     category {
-  #       id
-  #       name
-  #     }
-  #   }
-  # }
   query items {
     items {
       id
       name
+      category {
+        id
+        name
+      }
     }
   }
 `
