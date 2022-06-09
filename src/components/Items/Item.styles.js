@@ -4,7 +4,7 @@ export const Main = styled.div`
   width: 100%;
   margin: 20px 0;
   padding: 10px 30px;
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.colors.detailsBackground};
   border-radius: 10px;
 `
 
@@ -24,8 +24,8 @@ export const Header = styled.div`
 
   button {
     padding: 10px 15px;
-    text-transform: uppercase;
     font-size: 12px;
+    background-color: ${({ theme }) => theme.colors.actionButton};
   }
 `
 
@@ -48,13 +48,19 @@ export const Detail = styled.div`
     font-size: 12px;
     text-transform: uppercase;
     margin-bottom: 10px;
-    color: ${({ theme }) => theme.colors.grey};
+    color: ${({ theme }) => theme.colors.mutedText};
   }
 
   p {
     margin-top: 0;
     text-transform: capitalize;
     font-size: 18px;
+  }
+
+  .purchaseList {
+    margin-top: 30px;
+    border-top: 1px solid ${({ theme }) => theme.colors.detailsDivider};
+    border-bottom: 1px solid ${({ theme }) => theme.colors.detailsDivider};
   }
 
   li {

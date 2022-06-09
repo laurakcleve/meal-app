@@ -10,7 +10,11 @@ export const DishForm = styled(Form)`
     font-weight: 500;
     font-family: 'Roboto';
     text-transform: uppercase;
-    color: ${({ theme }) => theme.colors.grey};
+    color: ${({ theme }) => theme.colors.mutedText};
+  }
+
+  input {
+    background-color: ${({ theme }) => theme.colors.inputBackgroundLight};
   }
 
   .row {
@@ -32,6 +36,10 @@ export const Active = styled.div``
 
 export const Ingredients = styled.div`
   width: 100%;
+
+  button {
+    background-color: ${({ theme }) => theme.colors.actionButton};
+  }
 `
 
 export const IngredientSet = styled.div`
@@ -76,8 +84,9 @@ export const IngredientInputWrapper = styled.div`
     padding: 0;
     cursor: pointer;
 
-    :focus {
+    :focus-visible {
       outline: none;
+      border: none;
     }
   }
 `
@@ -86,7 +95,6 @@ export const IngredientInput = styled.input`
   display: inline-block;
   min-width: 290px;
   margin-bottom: 5px;
-  background-color: ${({ theme }) => theme.colors.lighterGrey};
 `
 
 export const Checkbox = styled.label`
@@ -106,7 +114,14 @@ export const ButtonsWrapper = styled.div`
 
   button {
     font-size: 12px;
-    text-transform: uppercase;
     margin-right: 15px;
+
+    &.cancel {
+      background-color: ${({ theme }) => theme.colors.cancelButton};
+    }
+
+    &.save {
+      background-color: ${({ theme }) => theme.colors.confirmButton};
+    }
   }
 `

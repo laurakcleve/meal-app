@@ -146,16 +146,26 @@ const ItemEditForm = ({ item, setIsEditing, history }) => {
         </Styled.CountsAs>
 
         <div>
-          <button type="button" onClick={() => setIsEditing(false)}>
+          <button
+            type="button"
+            className="cancel"
+            onClick={() => setIsEditing(false)}
+          >
             Cancel
           </button>
 
-          <button type="submit">Save</button>
+          <button type="submit" className="save">
+            Save
+          </button>
         </div>
       </Styled.FormContainer>
 
       <Styled.ButtonContainer>
-        <button type="button" onClick={(event) => submitDelete(event)}>
+        <button
+          type="button"
+          className="delete"
+          onClick={(event) => submitDelete(event)}
+        >
           Delete
         </button>
       </Styled.ButtonContainer>

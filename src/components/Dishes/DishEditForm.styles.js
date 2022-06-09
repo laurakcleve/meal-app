@@ -10,7 +10,7 @@ export const Delete = styled.div`
   margin-bottom: 30px;
 
   button {
-    text-transform: uppercase;
     font-size: 12px;
+    background-color: ${({ theme }) => theme.colors.deleteButton};
   }
 `

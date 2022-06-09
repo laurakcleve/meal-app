@@ -99,7 +99,7 @@ const Item = ({ match, history }) => {
               <Styled.Detail>
                 <h2>Purchases</h2>
                 <PurchaseStats purchases={data.itemById.purchases} />
-                <Layout.List>
+                <Layout.List className="purchaseList">
                   {data.itemById.purchases.map((purchase) => (
                     <ListItem key={purchase.id}>
                       <Styled.Date>

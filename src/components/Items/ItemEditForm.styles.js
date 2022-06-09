@@ -13,10 +13,21 @@ export const EditForm = styled.form`
   }
 
   button {
-    text-transform: uppercase;
     font-size: 12px;
     padding: 10px;
     margin-right: 15px;
+
+    &.delete {
+      background-color: ${({ theme }) => theme.colors.deleteButton};
+    }
+
+    &.save {
+      background-color: ${({ theme }) => theme.colors.confirmButton};
+    }
+
+    &.cancel {
+      background-color: ${({ theme }) => theme.colors.cancelButton};
+    }
   }
 `
 
@@ -35,7 +46,7 @@ export const Label = styled.div`
   font-weight: 500;
   font-family: 'Roboto';
   text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.grey};
+  color: ${({ theme }) => theme.colors.mutedText};
 `
 
 export const Name = styled(Input)``
@@ -48,5 +59,5 @@ export const ItemType = styled.select``
 
 export const CountsAs = styled.div`
   margin: 20px 0;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.detailsDivider};
 `

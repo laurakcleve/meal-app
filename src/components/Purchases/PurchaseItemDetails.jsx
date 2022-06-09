@@ -63,11 +63,15 @@ const PurchaseItemDetails = ({ purchaseId, purchaseItem }) => {
         />
       )}
 
-      <button type="button" onClick={handleDelete}>
+      <button type="button" className="delete" onClick={handleDelete}>
         Delete
       </button>
       {!isEditing && (
-        <button type="button" onClick={() => setIsEditing(true)}>
+        <button
+          type="button"
+          className="edit"
+          onClick={() => setIsEditing(true)}
+        >
           Edit
         </button>
       )}

@@ -8,11 +8,11 @@ export const Label = styled.label`
     font-weight: 500;
     font-family: 'Roboto';
     text-transform: uppercase;
-    color: ${({ theme }) => theme.colors.grey};
+    color: ${({ theme }) => theme.colors.mutedText};
   }
 `
 export const InputEl = styled.input`
-  background-color: ${(props) => props.backgroundColor};
+  background-color: ${({ theme }) => theme.colors.inputBackgroundLight};
   width: 100%;
   box-sizing: border-box;
 
@@ -22,5 +22,10 @@ export const InputEl = styled.input`
 
   &:disabled {
     color: #b4b4b4;
+  }
+
+  &:focus-visible {
+    outline: 1px solid ${({ theme }) => theme.colors.mutedText};
+    border: none;
   }
 `

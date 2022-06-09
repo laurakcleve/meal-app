@@ -11,8 +11,8 @@ export const Header = styled.div`
 
   button {
     padding: 10px 15px;
-    text-transform: uppercase;
     font-size: 12px;
+    background-color: ${({ theme }) => theme.colors.deleteButton};
   }
 `
 

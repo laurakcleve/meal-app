@@ -9,7 +9,6 @@ export const Form = styled.form`
   button {
     height: 35px;
     width: 127px;
-    text-transform: uppercase;
     font-size: 12px;
   }
 `

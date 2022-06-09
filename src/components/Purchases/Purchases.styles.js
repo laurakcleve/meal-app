@@ -12,11 +12,11 @@ export const AddForm = styled(Form)`
   margin: 25px 0 60px;
 
   input {
-    background-color: #f8f7f7;
-    border: 1px solid #c1bfbe;
+    background-color: ${({ theme }) => theme.colors.inputBackgroundDark};
   }
 
   button {
     margin-top: 14px;
+    background-color: ${({ theme }) => theme.colors.confirmButton};
   }
 `

@@ -19,9 +19,9 @@ export const Actions = styled.div`
   margin-top: 30px;
 
   button {
-    text-transform: uppercase;
     font-size: 12px;
     margin-left: 10px;
+    background-color: ${({ theme }) => theme.colors.actionButton};
   }
 
   .svg-inline--fa.fa-w-16 {

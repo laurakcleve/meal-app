@@ -12,13 +12,12 @@ export const Label = styled.div`
   font-weight: 500;
   font-family: 'Roboto';
   text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.grey};
+  color: ${({ theme }) => theme.colors.mutedText};
 `
 
 export const Combo = styled.div`
   .input {
     display: inline-block;
-    background-color: #f8f7f7;
     margin-right: 2px;
   }
 `
@@ -28,11 +27,10 @@ export const Amount = styled(Input)`
     width: 60px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    background-color: #ededed;
     margin-right: -1px;
 
     ::placeholder {
-      color: #c3c3c3;
+      color: ${({ theme }) => theme.colors.mutedText};
     }
   }
 `
@@ -42,11 +40,6 @@ export const Unit = styled(Input)`
     width: 75px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    background-color: #ededed;
-
-    ::placeholder {
-      color: #c3c3c3;
-    }
   }
 `
 
@@ -59,7 +52,6 @@ export const Price = styled(Input)`
 
   input {
     padding-left: 27px;
-    background-color: #ededed;
   }
 
   .label::after {
@@ -79,5 +71,13 @@ export const Actions = styled.div`
 
   button {
     width: 70px;
+
+    &.cancel {
+      background-color: ${({ theme }) => theme.colors.cancelButton};
+    }
+
+    &.save {
+      background-color: ${({ theme }) => theme.colors.confirmButton};
+    }
   }
 `

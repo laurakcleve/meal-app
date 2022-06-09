@@ -184,7 +184,11 @@ const DishDetails = ({ dish }) => {
       </Styled.Container>
 
       <Styled.Actions>
-        <button type="button" onClick={() => setIsEditing(true)}>
+        <button
+          type="button"
+          className="edit"
+          onClick={() => setIsEditing(true)}
+        >
           Edit
         </button>
       </Styled.Actions>

@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
 `
 
 export const ListItem = styled.li`
-  background-color: ${({ theme }) => theme.colors.lighterGrey};
+  background-color: ${({ theme }) => theme.colors.tag};
   padding: 8px 12px;
   border-radius: 12px;
   font-size: 14px;
@@ -32,6 +32,8 @@ export const ListItem = styled.li`
     margin: 0;
     margin-left: 15px;
     cursor: pointer;
+    background-color: ${({ theme }) => theme.colors.tag};
+    color: ${({ theme }) => theme.colors.tagButton};
 
     &:focus {
       outline: none;

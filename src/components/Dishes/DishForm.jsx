@@ -220,6 +220,7 @@ const DishForm = ({
       <Styled.ButtonsWrapper>
         <button
           type="button"
+          className="cancel"
           onClick={() => {
             resetFields()
             handleCancel()
@@ -230,6 +231,7 @@ const DishForm = ({
 
         <button
           type="button"
+          className="save"
           onClick={(event) =>
             handleSave(event, {
               name,

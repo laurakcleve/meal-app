@@ -17,20 +17,18 @@ export const Button = styled.button`
 
   &[data-match='all'] {
     background-color: ${({ theme, match }) =>
-      match === 'all' ? theme.colors.blue : '#fff'};
-    color: ${({ theme, match }) =>
-      match === 'all' ? '#fff' : theme.colors.grey};
-    border: ${({ theme, match }) =>
-      match === 'all' ? 'none' : `1px solid ${theme.colors.grey}`};
+      match === 'all' ? theme.colors.highlight : theme.colors.inputBackgroundLight};
+    color: ${({ theme, match }) => (match === 'all' ? '#fff' : theme.colors.grey)};
+    /* border: ${({ theme, match }) =>
+      match === 'all' ? 'none' : `1px solid ${theme.colors.grey}`}; */
   }
 
   &[data-match='any'] {
     background-color: ${({ theme, match }) =>
-      match === 'any' ? theme.colors.blue : '#fff'};
-    color: ${({ theme, match }) =>
-      match === 'any' ? '#fff' : theme.colors.grey};
-    border: ${({ theme, match }) =>
-      match === 'any' ? 'none' : `1px solid ${theme.colors.grey}`};
+      match === 'any' ? theme.colors.highlight : theme.colors.inputBackgroundLight};
+    color: ${({ theme, match }) => (match === 'any' ? '#fff' : theme.colors.grey)};
+    /* border: ${({ theme, match }) =>
+      match === 'any' ? 'none' : `1px solid ${theme.colors.grey}`}; */
   }
 
   &:first-child {

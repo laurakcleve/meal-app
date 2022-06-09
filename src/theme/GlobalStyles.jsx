@@ -6,7 +6,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     margin: 0;
     background: ${({ theme }) => theme.colors.background};
-    color: ${({ theme }) => theme.colors.darkGrey};
+    color: ${({ theme }) => theme.colors.text};
     font-family: 'Roboto';
   }
 
@@ -18,18 +18,25 @@ const GlobalStyles = createGlobalStyle`
   input {
     padding: 10px 12px;
     background-color: ${({ theme }) => theme.colors.inputBackground}; 
-    color: ${({ theme }) => theme.colors.darkGrey};
+    color: ${({ theme }) => theme.colors.text};
     border: none;
     border-radius: 4px;
-    font-family: 'Roboto'
+    font-family: 'Roboto';
+
+    &:focus-visible {
+      outline: 1px solid ${({ theme }) => theme.colors.mutedText};
+      border: none;
+    }
   }
 
   button {
     padding: 5px 7px;
-    color: ${({ theme }) => theme.colors.darkGrey};
+    color: ${({ theme }) => theme.colors.buttonText};
     font-family: 'Roboto';
+    font-weight: 600;
+    text-transform: uppercase;
     border-radius: 4px;
-    border: ${({ theme }) => `1px solid ${theme.colors.grey}`};
+    border: none;
   }
 
   .checkbox {
@@ -59,7 +66,7 @@ const GlobalStyles = createGlobalStyle`
       display: inline-block;
       height: 17px;
       width: 17px;
-      border: 1px solid;
+      border: 2px solid ${({ theme }) => theme.colors.mutedText};
       border-radius: 3px;
       box-sizing: border-box;
     }
@@ -88,12 +95,16 @@ const GlobalStyles = createGlobalStyle`
   }
 
   select {
-    background-color: ${({ theme }) => theme.colors.lighterGrey};
-    color: ${({ theme }) => theme.colors.darkGrey};
+    background-color: ${({ theme }) => theme.colors.inputBackgroundLight};
+    color: ${({ theme }) => theme.colors.text};
     border: none;
     border-radius: 4px;
     font-family: 'Roboto';
     padding: 9px 10px;
+  }
+
+  ::-webkit-calendar-picker-indicator {
+    filter: invert(1);
   }
 `
 

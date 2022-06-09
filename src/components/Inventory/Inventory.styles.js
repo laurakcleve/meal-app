@@ -8,7 +8,7 @@ export const AddButton = styled.button`
   width: 30px;
   height: 30px;
   background: ${({ theme, open }) =>
-    open ? theme.colors.grey : theme.colors.green};
+    open ? theme.colors.cancelButton : theme.colors.confirmButton};
   border: none;
   color: #fff;
   font-weight: bold;

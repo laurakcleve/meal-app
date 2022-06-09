@@ -96,10 +96,18 @@ const PurchaseItemEditForm = ({
       />
 
       <Styled.Actions>
-        <button type="button" onClick={() => setIsEditing(false)}>
+        <button
+          type="button"
+          className="cancel"
+          onClick={() => setIsEditing(false)}
+        >
           Cancel
         </button>
-        <button type="submit" onClick={(event) => handleSave(event)}>
+        <button
+          type="submit"
+          className="save"
+          onClick={(event) => handleSave(event)}
+        >
           Save
         </button>
       </Styled.Actions>

@@ -11,8 +11,12 @@ export const Container = styled.div`
   }
 
   input {
-    background-color: #f8f7f7;
-    border: 1px solid #c1bfbe;
+    background-color: ${({ theme }) => theme.colors.inputBackgroundDark};
+    border: 1px solid ${({ theme }) => theme.colors.inputBorder};
+
+    &:focus-visible {
+      outline: 1px solid ${({ theme }) => theme.colors.mutedText};
+    }
   }
 `
 

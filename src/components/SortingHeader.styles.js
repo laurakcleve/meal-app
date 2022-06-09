@@ -7,9 +7,9 @@ export const ListHeader = styled.div`
     padding: 15px;
     border: none;
     background: transparent;
-    text-transform: uppercase;
     font-size: 12px;
     cursor: pointer;
+    color: ${({ theme }) => theme.colors.text};
 
     &:focus {
       outline: none;

@@ -21,7 +21,7 @@ export const Label = styled.div`
   font-weight: 500;
   font-family: 'Roboto';
   text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.grey};
+  color: ${({ theme }) => theme.colors.mutedText};
 `
 
 export const Amount = styled(Input)``
@@ -37,4 +37,12 @@ export const Actions = styled.div`
   display: flex;
   justify-content: flex-end;
   gap: 20px;
+
+  button.cancel {
+    background-color: ${({ theme }) => theme.colors.cancelButton};
+  }
+
+  button.submit {
+    background-color: ${({ theme }) => theme.colors.confirmButton};
+  }
 `

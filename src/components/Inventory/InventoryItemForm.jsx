@@ -171,11 +171,12 @@ const InventoryItemForm = ({
       </div>
 
       <Styled.Actions>
-        <button type="button" onClick={handleCancel}>
+        <button type="button" className="cancel" onClick={handleCancel}>
           Cancel
         </button>
         <button
           type="submit"
+          className="submit"
           onClick={(event) =>
             handleSave(event, {
               name,

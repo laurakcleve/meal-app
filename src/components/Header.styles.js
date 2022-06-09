@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export const Header = styled.header`
   height: 100px;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid ${({ theme }) => theme.colors.headerBorder};
 `
 
 export const Container = styled.div`
@@ -21,14 +21,14 @@ export const CustomLink = styled(Link)`
   padding: 10px 0;
   color: ${(props) =>
     props.pathname === props.to || (props.pathname === '/' && props.to === '/items')
-      ? props.theme.colors.blue
-      : props.theme.colors.grey};
+      ? props.theme.colors.headerHighlight
+      : props.theme.colors.text};
   font-family: 'Roboto';
   font-size: 20px;
   font-weight: 500;
   text-transform: uppercase;
   border-bottom: ${(props) =>
     props.pathname === props.to || (props.pathname === '/' && props.to === '/items')
-      ? `5px solid ${props.theme.colors.blue}`
+      ? `5px solid ${props.theme.colors.headerHighlight}`
       : `5px solid transparent`};
 `

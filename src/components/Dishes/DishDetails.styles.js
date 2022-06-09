@@ -66,6 +66,13 @@ export const DateForm = styled.form`
     display: block;
     margin: 10px 0;
     box-sizing: border-box;
+    background-color: ${({ theme }) => theme.colors.inputBackgroundLight};
+  }
+
+  button[type='submit'] {
+    background-color: ${({ theme }) => theme.colors.confirmButton};
+    color: #fff;
+    font-weight: normal;
   }
 `
 
@@ -74,8 +81,8 @@ export const Actions = styled.div`
   display: flex;
   justify-content: flex-end;
 
-  button {
-    text-transform: uppercase;
+  button.edit {
     font-size: 12px;
+    background-color: ${({ theme }) => theme.colors.actionButton};
   }
 `
