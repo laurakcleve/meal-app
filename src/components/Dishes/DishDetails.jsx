@@ -91,9 +91,6 @@ const DishDetails = ({ dish }) => {
 
   return (
     <>
-      <div style={{ color: '#c1c1c1', marginBottom: '20px' }}>
-        ID: {dish.id}
-      </div>
       <Styled.Container>
         {isEditing ? (
           <DishEditForm
@@ -183,15 +180,15 @@ const DishDetails = ({ dish }) => {
         )}
       </Styled.Container>
 
-      <Styled.Actions>
-        <button
-          type="button"
-          className="edit"
-          onClick={() => setIsEditing(true)}
-        >
-          Edit
-        </button>
-      </Styled.Actions>
+        <Styled.Actions>
+          <button
+            type="button"
+            className="edit"
+            onClick={() => setIsEditing(true)}
+          >
+            Edit
+          </button>
+        </Styled.Actions>
     </>
   )
 }
