@@ -1,13 +1,16 @@
 import { createGlobalStyle } from 'styled-components'
-import 'typeface-mukta'
-import 'typeface-roboto'
+import '@fontsource/be-vietnam-pro'
+import '@fontsource/be-vietnam-pro/300.css'
+import '@fontsource/be-vietnam-pro/500.css'
+import '@fontsource/be-vietnam-pro/600.css'
 
 const GlobalStyles = createGlobalStyle`
   body {
     margin: 0;
     background: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.text};
-    font-family: 'Roboto';
+    font-family: 'Be Vietnam Pro';
+    font-size: 14px;
   }
 
   a {
@@ -21,7 +24,7 @@ const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.colors.text};
     border: none;
     border-radius: 4px;
-    font-family: 'Roboto';
+    font-family: 'Be Vietnam Pro';
 
     &:focus-visible {
       outline: 1px solid ${({ theme }) => theme.colors.mutedText};
@@ -32,8 +35,8 @@ const GlobalStyles = createGlobalStyle`
   button {
     padding: 5px 7px;
     color: ${({ theme }) => theme.colors.buttonText};
-    font-family: 'Roboto';
     font-weight: 600;
+    font-family: 'Be Vietnam Pro';
     text-transform: uppercase;
     border-radius: 4px;
     border: none;
@@ -99,7 +102,6 @@ const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.colors.text};
     border: none;
     border-radius: 4px;
-    font-family: 'Roboto';
     padding: 9px 10px;
   }
 

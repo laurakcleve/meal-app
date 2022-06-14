@@ -4,9 +4,6 @@ export const ListItem = styled.div`
   margin-bottom: 7px;
   background: ${({ theme }) => theme.colors.listItemBackground};
   border-radius: 3px;
-  font-family: 'Roboto';
-  font-size: 13px;
-  font-weight: 500;
 `
 
 export const FlexBar = styled.div`

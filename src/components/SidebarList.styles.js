@@ -12,7 +12,7 @@ export const List = styled.ul`
     &.selected,
     &.selected > button {
       color: #fff;
-      background-color: ${({ theme }) => theme.colors.highlight};
+      background-color: ${({ theme }) => theme.colors.highlightDark};
     }
 
     button {
@@ -22,11 +22,9 @@ export const List = styled.ul`
       border: none;
       background-color: transparent;
       color: ${({ theme }) => theme.colors.text};
-      font-family: 'Roboto';
-      font-size: 13px;
-      font-weight: 500;
       text-align: left;
       cursor: pointer;
+      font-weight: 400;
     }
   }
 `

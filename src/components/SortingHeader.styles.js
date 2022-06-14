@@ -4,12 +4,12 @@ export const ListHeader = styled.div`
   display: flex;
 
   button {
-    padding: 15px;
+    padding: 15px 15px 8px;
     border: none;
     background: transparent;
-    font-size: 12px;
+    font-size: 11px;
     cursor: pointer;
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.highlightLight};
 
     &:focus {
       outline: none;

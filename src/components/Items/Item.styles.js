@@ -16,6 +16,7 @@ export const Header = styled.div`
   h1 {
     flex: 1;
     font-size: 22px;
+    font-weight: 500;
 
     &:first-letter {
       text-transform: uppercase;
@@ -45,7 +46,7 @@ export const Detail = styled.div`
   margin-bottom: 36px;
 
   h2 {
-    font-size: 12px;
+    font-size: 11px;
     text-transform: uppercase;
     margin-bottom: 10px;
     color: ${({ theme }) => theme.colors.mutedText};
@@ -54,7 +55,8 @@ export const Detail = styled.div`
   p {
     margin-top: 0;
     text-transform: capitalize;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 300;
   }
 
   .purchaseList {

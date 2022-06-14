@@ -6,9 +6,8 @@ import Input from '../Input'
 export const DishForm = styled(Form)`
   .label {
     width: 100%;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 500;
-    font-family: 'Roboto';
     text-transform: uppercase;
     color: ${({ theme }) => theme.colors.mutedText};
   }

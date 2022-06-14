@@ -6,8 +6,8 @@ export const Container = styled.div`
 
   span {
     margin-right: 7px;
-    font-size: 13px;
     text-transform: uppercase;
+    font-size: 11px;
   }
 
   input {

@@ -9,26 +9,27 @@ export const Container = styled.div`
 export const Button = styled.button`
   flex: 1;
   padding: 7px;
-  font-family: 'Roboto';
   text-transform: uppercase;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 13px;
+  font-weight: 400;
 
   &[data-match='all'] {
     background-color: ${({ theme, match }) =>
-      match === 'all' ? theme.colors.highlight : theme.colors.inputBackgroundLight};
+      match === 'all'
+        ? theme.colors.highlightDark
+        : theme.colors.inputBackgroundLight};
     color: ${({ theme, match }) => (match === 'all' ? '#fff' : theme.colors.grey)};
-    /* border: ${({ theme, match }) =>
-      match === 'all' ? 'none' : `1px solid ${theme.colors.grey}`}; */
   }
 
   &[data-match='any'] {
     background-color: ${({ theme, match }) =>
-      match === 'any' ? theme.colors.highlight : theme.colors.inputBackgroundLight};
+      match === 'any'
+        ? theme.colors.highlightDark
+        : theme.colors.inputBackgroundLight};
     color: ${({ theme, match }) => (match === 'any' ? '#fff' : theme.colors.grey)};
-    /* border: ${({ theme, match }) =>
-      match === 'any' ? 'none' : `1px solid ${theme.colors.grey}`}; */
   }
 
   &:first-child {

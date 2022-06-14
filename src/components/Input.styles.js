@@ -4,9 +4,8 @@ export const Label = styled.label`
   margin-bottom: 10px;
 
   .label {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 500;
-    font-family: 'Roboto';
     text-transform: uppercase;
     color: ${({ theme }) => theme.colors.mutedText};
   }

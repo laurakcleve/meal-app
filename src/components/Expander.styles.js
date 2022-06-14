@@ -6,7 +6,7 @@ export const Container = styled.div`
 
   h3 {
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 11px;
     color: ${({ theme }) => theme.colors.mutedText};
     margin-bottom: 5px;
   }

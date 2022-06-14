@@ -60,6 +60,10 @@ export const DateList = styled.div`
 export const DateForm = styled.form`
   label {
     margin-left: 3px;
+    color: ${({ theme }) => theme.colors.mutedText};
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
   }
 
   input {

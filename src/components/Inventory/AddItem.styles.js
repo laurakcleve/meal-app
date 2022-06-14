@@ -24,9 +24,8 @@ export const AddItem = styled.div`
   }
 
   .label {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 500;
-    font-family: 'Roboto';
     color: ${({ theme }) => theme.colors.mutedText};
   }
 

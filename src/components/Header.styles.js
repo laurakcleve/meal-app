@@ -23,7 +23,6 @@ export const CustomLink = styled(Link)`
     props.pathname === props.to || (props.pathname === '/' && props.to === '/items')
       ? props.theme.colors.headerHighlight
       : props.theme.colors.text};
-  font-family: 'Roboto';
   font-size: 20px;
   font-weight: 500;
   text-transform: uppercase;
