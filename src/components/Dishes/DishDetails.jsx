@@ -180,6 +180,7 @@ const DishDetails = ({ dish }) => {
         )}
       </Styled.Container>
 
+      {!isEditing && (
         <Styled.Actions>
           <button
             type="button"
@@ -189,6 +190,7 @@ const DishDetails = ({ dish }) => {
             Edit
           </button>
         </Styled.Actions>
+      )}
     </>
   )
 }
