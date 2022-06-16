@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useQuery, useMutation, gql } from '@apollo/client'
 import { Link } from 'react-router-dom'
 
+import cloneDeep from 'lodash.clonedeep'
 import * as Layout from '../Layout.styles'
 import * as Styled from './Purchases.styles'
 import Input from '../Input'
@@ -22,9 +23,13 @@ const Purchases = () => {
     },
     update: (cache, { data: { addPurchase } }) => {
       const data = cache.readQuery({ query: PURCHASES_QUERY })
+      const newPurchase = cloneDeep(addPurchase)
+
+      newPurchase.date = new Date(addPurchase.date)
+
       cache.writeQuery({
         query: PURCHASES_QUERY,
-        data: { purchases: [addPurchase, ...data.purchases] },
+        data: { purchases: [newPurchase, ...data.purchases] },
       })
     },
   })
