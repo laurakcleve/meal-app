@@ -20,6 +20,7 @@ const Purchase = ({ match, history }) => {
 
   const [deletePurchase] = useMutation(DELETE_PURCHASE_MUTATION, {
     onCompleted: () => history.push('/purchases'),
+    refetchQueries: [{ query: PURCHASES_QUERY }],
   })
 
   const submitDelete = (event) => {
@@ -127,6 +128,19 @@ const PURCHASE_QUERY = gql`
         weightUnit
         quantityAmount
         quantityUnit
+      }
+    }
+  }
+`
+
+const PURCHASES_QUERY = gql`
+  query purchases {
+    purchases {
+      id
+      date
+      location {
+        id
+        name
       }
     }
   }
