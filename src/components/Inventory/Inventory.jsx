@@ -199,7 +199,7 @@ const Inventory = () => {
               <Styled.Name>{item.item.name}</Styled.Name>
               <Styled.Location>{item.location.name}</Styled.Location>
               <Styled.Expiration>
-                {moment(Number(item.expiration)).fromNow()}
+                {moment(item.expiration).fromNow()}
               </Styled.Expiration>
             </ListItem>
           ))}

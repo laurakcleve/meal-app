@@ -9,7 +9,7 @@ import ListItem from '../ListItem'
 import DishDetails from './DishDetails'
 import DishTags from './DishTags'
 import Expander from '../Expander'
-import { formatDate } from '../../utils'
+import { pgDateToDisplayDate } from '../../utils'
 import SortingHeader from '../SortingHeader'
 import DishAddForm from './DishAddForm'
 import Wrapper from '../Wrapper'
@@ -239,7 +239,8 @@ const Dishes = () => {
                   <Styled.Active>{dish.isActiveDish && 'Active'}</Styled.Active>
 
                   <Styled.Date>
-                    {dish.dates.length > 0 && formatDate(dish.dates[0].date)}
+                    {dish.dates.length > 0 &&
+                      pgDateToDisplayDate(dish.dates[0].date)}
                   </Styled.Date>
                 </ListItem>
               )

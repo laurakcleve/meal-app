@@ -7,7 +7,7 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 
 import * as Styled from './InventoryItemDetails.styles'
-import { formatDate } from '../../utils'
+import { pgDateToDisplayDate } from '../../utils'
 import UsedIn from './UsedIn'
 import InventoryItemEditForm from './InventoryItemEditForm'
 
@@ -49,8 +49,8 @@ const InventoryItemDetails = ({ inventoryItem }) => {
               <Styled.AddDate>
                 <h3>Added:</h3>
                 <p>
-                  {formatDate(inventoryItem.addDate)} (
-                  {moment(Number(inventoryItem.addDate)).fromNow()})
+                  {pgDateToDisplayDate(inventoryItem.addDate)} (
+                  {moment(inventoryItem.addDate).fromNow()})
                 </p>
               </Styled.AddDate>
             )}
@@ -90,7 +90,6 @@ const InventoryItemDetails = ({ inventoryItem }) => {
           Edit
         </button>
       </Styled.Actions>
-
     </>
   )
 }

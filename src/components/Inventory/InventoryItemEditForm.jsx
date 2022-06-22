@@ -4,7 +4,7 @@ import moment from 'moment'
 import { useMutation, gql } from '@apollo/client'
 
 import InventoryItemForm from './InventoryItemForm'
-import { getExpirationFromNow, millisecondsToPgFormat } from '../../utils'
+import { getExpirationFromNow, millisecondsToPgDate } from '../../utils'
 
 const InventoryItemEditForm = ({ inventoryItem, setIsEditing }) => {
   const [isSaveComplete, setIsSaveComplete] = useState(false)
@@ -31,7 +31,7 @@ const InventoryItemEditForm = ({ inventoryItem, setIsEditing }) => {
         addDate: addDate || null,
         expiration:
           addDate && daysLeft
-            ? millisecondsToPgFormat(getExpirationFromNow(daysLeft))
+            ? millisecondsToPgDate(getExpirationFromNow(daysLeft))
             : null,
         amount: amount || null,
         itemType,
@@ -47,7 +47,7 @@ const InventoryItemEditForm = ({ inventoryItem, setIsEditing }) => {
     <InventoryItemForm
       addDate={
         inventoryItem.addDate
-          ? moment(Number(inventoryItem.addDate)).format('YYYY-MM-DD')
+          ? moment(inventoryItem.addDate).format('YYYY-MM-DD')
           : ''
       }
       location={inventoryItem.location ? inventoryItem.location.name : ''}
@@ -56,7 +56,7 @@ const InventoryItemEditForm = ({ inventoryItem, setIsEditing }) => {
       }
       daysLeft={
         inventoryItem.expiration
-          ? moment(Number(inventoryItem.expiration))
+          ? moment(inventoryItem.expiration)
               .diff(moment(), 'days')
               .toString()
           : ''

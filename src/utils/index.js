@@ -12,10 +12,6 @@ export const unitPrice = (price, amount, unit) => {
   return `$${formattedAmount}/${formattedUnit}`
 }
 
-export const millisecondsToPgFormat = (milliseconds) => {
-  return moment(Number(milliseconds)).format('YYYY-MM-DD')
-}
-
 export const getExpirationFromAddDate = (addDate, daysLeft) => {
   return moment(Number(addDate))
     .add(daysLeft, 'days')
@@ -60,6 +56,14 @@ export const inventoryAmountString = (
   return result
 }
 
-export const formatDate = (milliseconds) => {
+export const millisecondsToDisplayDate = (milliseconds) => {
   return moment(Number(milliseconds)).format('M/D/YY')
+}
+
+export const millisecondsToPgDate = (milliseconds) => {
+  return moment(Number(milliseconds)).format('YYYY-MM-DD')
+}
+
+export const pgDateToDisplayDate = (pgFormat) => {
+  return moment(pgFormat).format('M/D/YY')
 }

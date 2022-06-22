@@ -7,7 +7,7 @@ import * as Layout from '../Layout.styles'
 import * as Styled from './Purchases.styles'
 import Input from '../Input'
 import ListItem from '../ListItem'
-import { formatDate } from '../../utils'
+import { pgDateToDisplayDate } from '../../utils'
 
 const Purchases = () => {
   const { data: locationsData, loading, error } = useQuery(
@@ -15,6 +15,8 @@ const Purchases = () => {
   )
 
   const { data: purchasesData } = useQuery(PURCHASES_QUERY)
+
+  console.log('DATA:\n', purchasesData)
 
   const [addPurchase] = useMutation(ADD_PURCHASE_MUTATION, {
     onCompleted: () => {
@@ -40,6 +42,7 @@ const Purchases = () => {
   const submit = (event) => {
     event.preventDefault()
     if (date && location) {
+      console.log('DATE\n', date)
       addPurchase({
         variables: {
           date,
@@ -83,7 +86,9 @@ const Purchases = () => {
               <Link key={purchase.id} to={`/purchase/${purchase.id}`}>
                 <ListItem>
                   <Styled.Location>{purchase.location.name}</Styled.Location>
-                  <Styled.Date>{formatDate(purchase.date)}</Styled.Date>
+                  <Styled.Date>
+                    {pgDateToDisplayDate(purchase.date)}
+                  </Styled.Date>
                 </ListItem>
               </Link>
             ))}

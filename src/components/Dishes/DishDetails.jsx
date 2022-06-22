@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 
 import * as Styled from './DishDetails.styles'
-import { formatDate } from '../../utils'
+import { pgDateToDisplayDate } from '../../utils'
 import DishEditForm from './DishEditForm'
 import Ingredient from './Ingredient'
 
@@ -64,7 +64,7 @@ const DishDetails = ({ dish }) => {
 
   const dateListItem = (date) => (
     <li key={date.id}>
-      {formatDate(date.date)}
+      {pgDateToDisplayDate(date.date)}
       <button
         className="delete"
         type="button"

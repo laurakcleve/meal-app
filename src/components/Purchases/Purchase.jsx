@@ -48,7 +48,7 @@ const Purchase = ({ match, history }) => {
           <>
             <Styled.Header>
               <h2>
-                {`${moment(Number(data.purchase.date)).format('M/D/YY')} - ${
+                {`${moment(data.purchase.date).format('M/D/YY')} - ${
                   data.purchase.location.name
                 }`}
               </h2>

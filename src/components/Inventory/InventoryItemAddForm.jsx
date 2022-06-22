@@ -5,7 +5,7 @@ import moment from 'moment'
 
 import InventoryItemForm from './InventoryItemForm'
 import * as Styled from './InventoryItemAddForm.styles'
-import { getExpirationFromAddDate, millisecondsToPgFormat } from '../../utils'
+import { getExpirationFromAddDate, millisecondsToPgDate } from '../../utils'
 
 const InventoryItemAddForm = ({ setIsAdding }) => {
   const [isSaveComplete, setIsSaveComplete] = useState(false)
@@ -34,7 +34,7 @@ const InventoryItemAddForm = ({ setIsAdding }) => {
         addDate: addDate || null,
         expiration:
           addDate && daysLeft
-            ? millisecondsToPgFormat(
+            ? millisecondsToPgDate(
                 getExpirationFromAddDate(moment(addDate).valueOf(), daysLeft)
               )
             : null,
