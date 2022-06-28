@@ -137,9 +137,7 @@ const PurchaseItemAddForm = ({ purchaseId }) => {
         addInventoryItem({
           variables: {
             name: itemName,
-            addDate: purchaseData
-              ? millisecondsToPgDate(purchaseData.purchase.date)
-              : null,
+            addDate: purchaseData ? purchaseData.purchase.date : null,
             expiration: purchaseData
               ? millisecondsToPgDate(
                   getExpirationFromAddDate(purchaseData.purchase.date, daysLeft)

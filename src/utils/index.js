@@ -13,7 +13,7 @@ export const unitPrice = (price, amount, unit) => {
 }
 
 export const getExpirationFromAddDate = (addDate, daysLeft) => {
-  return moment(Number(addDate))
+  return moment(addDate)
     .add(daysLeft, 'days')
     .valueOf()
 }
