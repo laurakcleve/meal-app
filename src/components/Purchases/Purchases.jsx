@@ -16,8 +16,6 @@ const Purchases = () => {
 
   const { data: purchasesData } = useQuery(PURCHASES_QUERY)
 
-  console.log('DATA:\n', purchasesData)
-
   const [addPurchase] = useMutation(ADD_PURCHASE_MUTATION, {
     onCompleted: () => {
       setDate('')
