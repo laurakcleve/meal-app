@@ -4,6 +4,7 @@ export const UsedIn = styled.div`
   button {
     margin-top: 10px;
     font-size: 11px;
+    background-color: ${({ theme }) => theme.colors.cancelButton};
   }
 `
 

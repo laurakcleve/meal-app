@@ -46,7 +46,7 @@ export const Detail = styled.div`
   margin-bottom: 36px;
 
   h2 {
-    font-size: 11px;
+    font-size: 13px;
     text-transform: uppercase;
     margin-bottom: 10px;
     color: ${({ theme }) => theme.colors.mutedText};

@@ -36,6 +36,11 @@ export const DateList = styled.div`
     }
   }
 
+  button {
+    background-color: ${({ theme }) => theme.colors.cancelButton};
+    font-weight: 400;
+  }
+
   button.delete {
     width: auto;
     height: auto;

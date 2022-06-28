@@ -4,7 +4,7 @@ export const Label = styled.label`
   margin-bottom: 10px;
 
   .label {
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 500;
     text-transform: uppercase;
     color: ${({ theme }) => theme.colors.mutedText};

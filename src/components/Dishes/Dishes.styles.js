@@ -7,7 +7,8 @@ export const Name = styled.div`
 export const Active = styled.div`
   flex: 1;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 11px;
+  color: ${({ theme }) => theme.colors.mutedText};
 `
 
 export const Date = styled.div`

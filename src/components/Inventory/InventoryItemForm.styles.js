@@ -17,7 +17,7 @@ export const AddDate = styled(Input)``
 
 export const Label = styled.div`
   display: block;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 500;
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.mutedText};
