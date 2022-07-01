@@ -103,9 +103,7 @@ const Item = ({ match, history }) => {
                   {data.itemById.purchases.map((purchase) => (
                     <ListItem key={purchase.id}>
                       <Styled.Date>
-                        {moment(Number(purchase.purchase.date)).format(
-                          'M/D/YY'
-                        )}
+                        {moment(purchase.purchase.date).format('M/D/YY')}
                       </Styled.Date>
                       <Styled.Location>
                         {purchase.purchase.location.name}
