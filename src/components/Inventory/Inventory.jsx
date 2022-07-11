@@ -42,15 +42,7 @@ const Inventory = () => {
         if (selectedLocationName === 'all') {
           return true
         }
-        if (
-          selectedLocationName === 'perishable' &&
-          item.location &&
-          (item.location.name === 'fridge' ||
-            item.location.name === 'leftovers' ||
-            item.location.name === 'produce')
-        ) {
-          return true
-        }
+
         return item.location && item.location.name === selectedLocationName
       })
 
