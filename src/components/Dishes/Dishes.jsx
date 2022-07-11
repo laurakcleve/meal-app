@@ -115,10 +115,10 @@ const Dishes = () => {
           if (b.dates.length <= 0) {
             return 1
           }
-          if (Number(a.dates[0].date) < Number(b.dates[0].date)) {
+          if (a.dates[0].date < b.dates[0].date) {
             return -1
           }
-          if (Number(a.dates[0].date) > Number(b.dates[0].date)) {
+          if (a.dates[0].date > b.dates[0].date) {
             return 1
           }
           return 0
