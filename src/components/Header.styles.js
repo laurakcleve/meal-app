@@ -20,14 +20,14 @@ export const CustomLink = styled(Link)`
   margin-bottom: -2px;
   padding: 10px 0;
   color: ${(props) =>
-    props.pathname === props.to || (props.pathname === '/' && props.to === '/items')
+    props.pathname === props.to || (props.pathname === '/' && props.to === '/purchases')
       ? props.theme.colors.headerHighlight
       : props.theme.colors.text};
   font-size: 20px;
   font-weight: 500;
   text-transform: uppercase;
   border-bottom: ${(props) =>
-    props.pathname === props.to || (props.pathname === '/' && props.to === '/items')
+    props.pathname === props.to || (props.pathname === '/' && props.to === '/purchases')
       ? `5px solid ${props.theme.colors.headerHighlight}`
       : `5px solid transparent`};
 `
