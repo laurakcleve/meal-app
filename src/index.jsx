@@ -73,13 +73,13 @@ const App = () => (
         <ThemeProvider theme={theme}>
           <GlobalStyles />
           <Header />
-          <Route exact path="/" component={Items} />
-          <Route exact path="/items" component={Items} />
-          <Route exact path="/item/:id" component={Item} />
-          <Route exact path="/dishes" component={Dishes} />
-          <Route exact path="/inventory" component={Inventory} />
+          <Route exact path="/" component={Purchases} />
           <Route exact path="/purchases" component={Purchases} />
           <Route exact path="/purchase/:id" component={Purchase} />
+          <Route exact path="/inventory" component={Inventory} />
+          <Route exact path="/dishes" component={Dishes} />
+          <Route exact path="/items" component={Items} />
+          <Route exact path="/item/:id" component={Item} />
         </ThemeProvider>
       </>
     </BrowserRouter>

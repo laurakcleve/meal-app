@@ -7,17 +7,17 @@ import * as Styled from './Header.styles'
 const Header = ({ location }) => (
   <Styled.Header>
     <Styled.Container>
-      <Styled.CustomLink to="/items" pathname={location.pathname}>
-        Items
-      </Styled.CustomLink>
-      <Styled.CustomLink to="/dishes" pathname={location.pathname}>
-        Dishes
+      <Styled.CustomLink to="/purchases" pathname={location.pathname}>
+        Purchases
       </Styled.CustomLink>
       <Styled.CustomLink to="/inventory" pathname={location.pathname}>
         Inventory
       </Styled.CustomLink>
-      <Styled.CustomLink to="/purchases" pathname={location.pathname}>
-        Purchases
+      <Styled.CustomLink to="/dishes" pathname={location.pathname}>
+        Dishes
+      </Styled.CustomLink>
+      <Styled.CustomLink to="/items" pathname={location.pathname}>
+        Items
       </Styled.CustomLink>
     </Styled.Container>
   </Styled.Header>
