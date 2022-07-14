@@ -7,7 +7,9 @@ The frontend is deployed to Netlify, and the backend to Heroku.
 [Backend repository](https://github.com/laurakcleve/go-meal)
 
 # Overview
+
 ## Purchases
+
 Add an entry for the date and location of each grocery trip.
 
 ![Purchases](images/purchases.png)
@@ -18,7 +20,7 @@ Enter the details of each item you bought. Items added to your purchase are auto
 
 The item's category, location, and shelflife are all remembered and filled in when you enter its name.
 
-// gif
+![Add purchase item](images/purchase-item-add.gif)
 
 ## Inventory
 
