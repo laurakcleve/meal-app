@@ -1,10 +1,10 @@
 An app for tracking your groceries, the food in your fridge, and the meals you can make with it.
 
-Built using PostgreSQL, Go, GraphQL, Apollo Client, React.
+Built using PostgreSQL, Go, GraphQL, Apollo Client, React, and Styled Components.
 
-The frontend is deployed to Netlify, and the backend to Heroku.
+Frontend is deployed to Netlify, backend is deployed to Heroku.
 
-[Backend repository](https://github.com/laurakcleve/go-meal)
+[Backend repository](https://github.com/laurakcleve/meal-app-backend)
 
 # Overview
 
