@@ -6,6 +6,8 @@ Frontend is deployed to Netlify, backend is deployed to Heroku.
 
 [Backend repository](https://github.com/laurakcleve/meal-app-backend)
 
+[Alternate Node API version](https://github.com/laurakcleve/meal-app-node)
+
 # Overview
 
 ## Purchases
